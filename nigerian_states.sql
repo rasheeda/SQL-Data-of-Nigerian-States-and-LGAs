@@ -6,8 +6,8 @@
 CREATE TABLE `nigerian_states` (
   `id` int(100) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -54,18 +54,10 @@ INSERT INTO `nigerian_states` (`name`) VALUES
 ('Zamfara');
 
 --
--- Indexes for dumped tables
---
-
---
 -- Indexes for table `nigerian_states`
 --
 ALTER TABLE `nigerian_states`
   ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
 
 --
 -- AUTO_INCREMENT for table `nigerian_states`
